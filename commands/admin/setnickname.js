@@ -23,10 +23,10 @@ exports.help = {
   name: "setnickname",
   description: "Set a user nickname.",
   usage: "/setnickname <@user> <nick>",
-  example: "/setnickname @ray#9999 hoisted"
+  example: "/setnickname @NaufaL-Kun#5555 hoisted"
 }
 
 exports.conf = {
   aliases: ["setnick"],
-  cooldown: 5
+  cooldown: 20
 }
