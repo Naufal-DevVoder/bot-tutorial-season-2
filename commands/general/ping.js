@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "ping",
   description: "Ponged!",
-  usage: "/ping",
+  usage: "c/ping",
   example: "/ping"
 };
 
