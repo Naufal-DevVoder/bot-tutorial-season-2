@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
 
         const embed = new Discord.MessageEmbed()
         .setAuthor("Spotify Track Information", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
-        .setColor(0x1ED768)
+        .setColor("RANDOM")
         .setThumbnail(image)
         .addField("Name:", name, true)
         .addField("Album:", album, true)
@@ -47,8 +47,8 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: "spotify",
     description: "Show a Listening Spotify user status.",
-    usage: "/spotify [@user]",
-    example: "/spotify @ray#1337"
+    usage: "c/spotify [@user]",
+    example: "/spotify @naufal-kun#5555"
   };
   
   exports.conf = {
