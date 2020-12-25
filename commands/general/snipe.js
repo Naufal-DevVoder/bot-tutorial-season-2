@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: "snipe",
   description: "Shows the last deleted message.",
-  usage: "/snipe",
+  usage: "c/snipe",
   example: "/snipe"
 };
 
