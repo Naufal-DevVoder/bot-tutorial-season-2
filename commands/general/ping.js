@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
-  message.channel.send("Pong!");
+  message.channel.send("**Selamat Anda Mendapatkan Pukulan Dari John Chena !");
 }
 
 exports.help = {
