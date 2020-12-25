@@ -10,14 +10,14 @@ exports.run = async (client, message, args) => {
     // This will hide a folder from display that includes "hide: true" in their module.json
     if (!client.config.owners.includes(message.author.id)) module = client.helps.array().filter(x => !x.hide);
     const embed = new Discord.MessageEmbed()
-    .setColor(0x1d1d1d)
+    .setColor("RANDOM")
     .setTimestamp(new Date())
-    .setDescription(`Type \`${prefix}help [command]\` to get more specific information about a command.`)
+    .setDescription(`Ketik \`${prefix}help [command]\` Untuk Mendapatkan Informasi Yang Lebih Spesifik Tentang Suatu Perintah.`)
     .setTitle("A bot")
     
     for (const mod of module) {
       // You can change the .join(" | ") to commas, dots or every symbol.
-      embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(" | "));
+      embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\```).join(" | "));
     }
     
     return message.channel.send(embed);
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
       let example = command.help.example ? command.help.example : "No example provided.";
       
       let embed = new Discord.MessageEmbed()
-      .setColor(0x7289DA)
+      .setColor("RANDOM")
       .setTitle(name)
       .setDescription(desc)
       .setThumbnail(client.user.displayAvatarURL())
@@ -48,7 +48,7 @@ exports.run = async (client, message, args) => {
       return message.channel.send(embed);
     } else {
       // If the user type the wrong command.
-      return message.channel.send({embed: {color: "RED", description: "Unknown command."}});
+      return message.channel.send({embed: {color: "RANDOM", description: "Unknown command."}});
     }
   }
 }
