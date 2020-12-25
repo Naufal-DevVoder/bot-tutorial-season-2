@@ -9,18 +9,18 @@ module.exports = async (client, member) => {
   let number = randomInteger(100000, 1000000);
   // The number will be shuffled from the range 100K - 1M
   
-  let verifyChannel = member.guild.channels.cache.find(ch => ch.id === "727597528027234354");
+  let verifyChannel = member.guild.channels.cache.find(ch => ch.id === "792028238192312330");
   // Your Verification Text Channel.
   
   await db.set(`verification.${member.user.id}`, number);
   
   const dm = new Discord.MessageEmbed()
   .setColor(0x7289DA)
-  .setTitle(`Welcome to ${member.guild.name}!`)
-  .setDescription("Hello! Before you get started, I just want you to verify yourself first.")
-  .addField("Put your code into the channel.", `**This is your code:** ${number}`)
+  .setTitle(`WELCOME TO ${member.guild.name} I Hope You Enjoy In The Server !`)
+  .setDescription("Hello! Bro And Sis, Selamat Datang. Untuk Membuka Akses Channel, Silahkan Verify Terlebih Dahulu ! Makasih")
+  .addField("Ambil Code Ini Dan Copy Paste Ke Channel Verify !.", `**Ini Code Kamu:** ${number}`)
   await member.send(dm).catch(() => {
-    verifyChannel.send(`<@!${member.user.id}> Hey, I guess your DM is locked. How about you unlock it first and type \`resend\` here.`)
+    verifyChannel.send(`<@!${member.user.id}> Hey, Saya kira DM Anda terkunci. Bagaimana kalau Anda membukanya dulu dan mengetik \`resend\` here.`)
     .then(i => i.delete({timeout: 10000}));
   })
 }
