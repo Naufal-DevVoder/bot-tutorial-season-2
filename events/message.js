@@ -11,7 +11,7 @@ module.exports = async (client, message) => {
   
   if (inviteLink.some(word => message.content.toLowerCase().includes(word))) {
     await message.delete();
-    return message.channel.send("Bro, you can't promote your server here!")
+    return message.channel.send("Bro And Sis, Plisss Jangan Kirim Link Server Lain!")
     .then(m => m.delete({timeout: 10000})) // Add this if you want the message automatically deleted.
   }
   
@@ -23,15 +23,15 @@ module.exports = async (client, message) => {
       await message.delete();
       const dm = new Discord.MessageEmbed()
       .setColor(0x7289DA)
-      .setTitle(`Welcome to ${message.guild.name}!`)
-      .setDescription("Hello! Before you get started, I just want you to verify yourself first.")
-      .addField("Put your code into the channel.", `**This is your code:** ${code}`)
+      .setTitltle(`WELCOME TO ${message.guild.name} I Hope You Enjoy In The Server !`)
+      .setDescription("Hello! Sebelum Memulai, Sebaiknya Anda Verify Terlebih Dahulu")
+      .addField("Ambil Code Tersebut, Dan Kirim Di Channel Verify !", `**Ini Code Kamu:** ${code}`)
       await message.author.send(dm).catch(() => {
-        return message.reply("Your DM is still locked. Unlock your DM first.")
+        return message.reply("Akses DM Kamu Terkunci. Saya Harap Anda Cepat Membukannya")
         .then(i => i.delete({timeout: 10000}));
       })
       
-      return message.reply("Check your DM.").then(i => i.delete({timeout: 10000}));
+      return message.reply("Check DM Kamu !").then(i => i.delete({timeout: 10000}));
     }
     
     // Verify System
@@ -48,9 +48,9 @@ module.exports = async (client, message) => {
         if (verify === code) {
           message.delete();
           db.delete(`verification.${message.author.id}`);
-          message.reply("You are not a robot! Please wait, 5 seconds okay?").then(i => i.delete({timeout: 7500}));
+          message.reply("Okayy Kamu Bukan Robot! Mohon Tunggu 5 Detik").then(i => i.delete({timeout: 7500}));
           setTimeout(function() {
-            message.member.roles.add("ROLE_ID");
+            message.member.roles.add("759031356360753182");
             // Use .roles.remove if you wanna remove the role after verification.
           }, 5000)
         }
