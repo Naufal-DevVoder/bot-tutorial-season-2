@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const tutorialBot = require("./handler/ClientBuilder.js"); // We're gonna create this soon.
-const client = new tutorialBot();
+const client = new C A M A R A D E R I E();
 
 require("./handler/module.js")(client);
 require("./handler/Event.js")(client);
